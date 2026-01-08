@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo - Tienda Online</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #1a1a1a 0%, #3d3d3d 100%);
+        }
+
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom {
+            transition: all 0.2s;
+            border-radius: 8px;
+        }
+
+        .btn-custom:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="font-extrabold text-xl tracking-tighter text-indigo-600 uppercase">TU MARCA</div>
+            <div class="flex space-x-4 text-sm font-medium">
+                <a href="https://wa.me/584121319983"
+                    class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition">Contacto
+                    WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CABECERA -->
+    <header id="inicio" class="hero-gradient min-h-[60vh] flex items-center pt-16 text-white relative">
+        <div class="max-w-6xl mx-auto px-6 text-center md:text-left">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6">Catálogo Digital <br><span
+                    class="text-indigo-400">Exclusivo</span></h1>
+            <p class="text-lg text-gray-300 mb-8 max-w-lg">Explora nuestros productos y servicios. Haz clic en lo que te
+                guste para consultarme directamente por WhatsApp.</p>
+        </div>
+    </header>
+
+    <!-- SECCIÓN DE TECNOLOGÍA (LA QUE SELECCIONASTE) -->
+    <section id="tech" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h3 class="text-3xl font-extrabold text-gray-900 mb-12">Tecnología y Cursos</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+
+                <!-- OPCIÓN 1: CURSOS -->
+                <div
+                    class="bg-white border border-gray-100 p-8 rounded-3xl shadow-sm card-hover flex flex-col items-center">
+                    <div
+                        class="w-16 h-16 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-graduation-cap"></i></div>
+                    <h4 class="text-xl font-bold mb-3">Aprende algo nuevo</h4>
+                    <p class="text-gray-600 text-sm mb-6">Cursos digitales y guías prácticas para potenciar tus
+                        habilidades profesionales.</p>
+                    <a href="https://wa.me/584121319983?text=Hola!%20Me%20interesan%20los%20Cursos%20Digitales%20y%20temarios."
+                        class="mt-auto bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition font-bold btn-custom">Ver
+                        Temarios</a>
+                </div>
+
+                <!-- OPCIÓN 2: GADGETS -->
+                <div class="bg-indigo-600 p-8 rounded-3xl shadow-lg card-hover flex flex-col items-center text-white">
+                    <div
+                        class="w-16 h-16 bg-white/20 text-white rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-mobile-alt"></i></div>
+                    <h4 class="text-xl font-bold mb-3">Gadgets Imperdibles</h4>
+                    <p class="text-indigo-100 text-sm mb-6">Lo último en tecnología al mejor precio. Audífonos, relojes
+                        y más.</p>
+                    <a href="https://wa.me/584121319983?text=Hola!%20Quiero%20ver%20el%20stock%20de%20Gadgets%20disponibles."
+                        class="mt-auto bg-white text-indigo-600 px-6 py-2 rounded-lg hover:bg-gray-100 transition font-bold btn-custom">Ver
+                        Stock</a>
+                </div>
+
+                <!-- OPCIÓN 3: FAVORITOS -->
+                <div
+                    class="bg-white border border-gray-100 p-8 rounded-3xl shadow-sm card-hover flex flex-col items-center">
+                    <div
+                        class="w-16 h-16 bg-yellow-100 text-yellow-600 rounded-2xl flex items-center justify-center text-2xl mb-6">
+                        <i class="fas fa-star"></i></div>
+                    <h4 class="text-xl font-bold mb-3">Nuestros Favoritos</h4>
+                    <p class="text-gray-600 text-sm mb-6">Recomendaciones del mes basadas en lo que más nos piden.</p>
+                    <a href="https://wa.me/584121319983?text=Hola!%20Cuales%20son%20tus%20productos%20favoritos%20recomendados?"
+                        class="mt-auto bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-yellow-600 transition font-bold btn-custom">Consultar</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BOTÓN WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/584121319983"
+        class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl z-50">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+</body>
+
+</html>
